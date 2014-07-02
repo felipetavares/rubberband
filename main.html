@@ -1,0 +1,246 @@
+<!--
+	Copyright (C) 2012,2013 by Calango Rei Games, wich is:
+	Felipe Tavares, Brenno Arruda, Vinicius Abdias, Mateus Medeiros and Giovanna Gorgônio
+-->
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Dead Wolf Version 2</title>
+		<meta charset="utf8" />
+		<style type="text/css">
+			@import url(style.css);
+			@import url(css/UI.css);
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="html5.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="modules/list.js"></script>
+		<script type="text/javascript" src="assets/list.js"></script>
+	</head>
+
+	<body>
+		<canvas id="html_canvas" width="640" height="480">
+		</canvas>
+
+		<div id="console">
+			<div id="console_text">
+			</div>
+			<input id="console_entrance" type="text"></input>
+		</div>
+
+		<textarea id="transfer">		
+		</textarea>
+		
+		<textarea id="map0">[{"image":"assets/images/back/nocol/sunset.png","w":640,"h":480,"height":0,"depth":0,"physics":{"p":[848,88],"s":[640,480],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/back/nocol/sunset.png","w":640,"h":480,"height":0,"depth":0,"physics":{"p":[208,88],"s":[640,480],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/back/nocol/sunset.png","w":640,"h":480,"height":0,"depth":0,"physics":{"p":[-432,104],"s":[640,480],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/tree.png","w":90,"h":136,"height":0,"depth":0,"physics":{"p":[572,248],"s":[90,136],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/tree.png","w":90,"h":136,"height":0,"depth":0,"physics":{"p":[848,248],"s":[90,136],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/tree.png","w":90,"h":136,"height":0,"depth":0,"physics":{"p":[452,248],"s":[90,136],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/lamp.png","w":19,"h":120,"height":0,"depth":0,"physics":{"p":[556,264],"s":[19,120],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/lamp.png","w":19,"h":120,"height":0,"depth":0,"physics":{"p":[408,264],"s":[19,120],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[704,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[640,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[736,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[768,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[672,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[742,319.5],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[768,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[704,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[672,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[640,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[640,320],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[741.5,320],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[796,320],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/lamp1.png","w":12,"h":12,"height":0,"depth":0,"physics":{"p":[692,320],"s":[12,12],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[640,320],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[736,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/neon.png","w":8,"h":21,"height":0,"depth":0,"physics":{"p":[632,328],"s":[8,21],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[796,336],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[640,336],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[704,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[736,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[640,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[672,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/nocol/backwall.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[767,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/table0.png","w":16,"h":20,"height":0,"depth":0,"physics":{"p":[694.5,364],"s":[16,20],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/nocol/stack.png","w":22,"h":16,"height":0,"depth":0,"physics":{"p":[668,368],"s":[22,16],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/chair0.png","w":8,"h":16,"height":0,"depth":0,"physics":{"p":[722.5,368],"s":[8,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[192,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[168,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[736,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[704,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[640,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[544,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[576,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[480,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[768,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[224,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[672,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[416,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[256,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/culvert.png","w":32,"h":4,"height":0,"depth":0,"physics":{"p":[448,384],"s":[32,4],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[864,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[832,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[800,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[288,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[320,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[384,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[352,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[608,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[896,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[928,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[960,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[992,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[512,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/door.png","w":4,"h":32,"height":0,"depth":0,"physics":{"p":[798,352],"s":[4,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/door.png","w":4,"h":32,"height":0,"depth":0,"physics":{"p":[748,352],"s":[4,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/lamp1.png","w":12,"h":12,"height":0,"depth":0,"physics":{"p":[768,320],"s":[12,12],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[748,320],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/wall.png","w":4,"h":16,"height":0,"depth":0,"physics":{"p":[748,336],"s":[4,16],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[256,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[256,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[256,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[256,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[224,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[224,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[224,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[224,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[192,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[192,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[192,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[192,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[160,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[160,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[160,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[160,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[1024,384],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[912,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[912,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[912,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[912,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[944,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[944,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[944,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[944,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[976,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[976,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[976,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[976,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[1008,256],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[1008,288],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[1008,320],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[1008,352],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/floor/normal.png","w":32,"h":32,"height":0,"depth":0,"physics":{"p":[448,388],"s":[32,32],"f":1,"cg":1,"depth":0,"r":true}},{"image":"assets/images/back/nocol/sit.png","w":33,"h":8,"height":0,"depth":0,"physics":{"p":[480,376],"s":[33,8],"f":1,"cg":1,"depth":0,"r":false}},{"image":"assets/images/floor/door.png","w":4,"h":32,"height":0,"depth":0,"physics":{"p":[639,352],"s":[4,32],"f":1,"cg":1,"depth":0,"r":true}}]</textarea>		
+
+		<script type="text/javascript">
+			var gameRenderer;
+
+			html5.getCanvas2dContext();
+			
+			jsEngine.start();
+
+			jsEngine.userCallbacks['onGameStart'] = function () {
+				jsEngine.modules.actions.addAction ("assets/images/floor/door.png","open", function (c) {
+					if (this.physics.r) {
+						this.physics.p[0] -= 14;
+						this.physics.s[0] += 12;
+						this.physics.r = false;
+						this.image = "assets/images/floor/door-open.png"
+						//jsEngine.modules.messages.addMessage (new Message("Opening door!"));
+					} else {
+						this.physics.p[0] += 14;
+						this.physics.s[0] -= 12;
+						this.physics.r = true;
+						this.image = "assets/images/floor/door.png"
+						//jsEngine.modules.messages.addMessage (new Message("Closing door"));						
+					}
+				});
+				jsEngine.modules.actions.addAction ("assets/images/floor/table0.png","open", function (c) {
+					c.jump(this);
+				});
+				jsEngine.modules.actions.addAction ("assets/images/floor/chair0.png","open", function (c) {
+					c.jump(this);
+				});
+
+				gameRenderer = new scnGame.renderer();
+				gameRenderer.scene = new scnGame.scene();
+				gameRenderer.start();
+				gameRenderer.scene.doImport($("#map0").val());
+				gameRenderer.zoom();
+
+				jsEngine.modules.render.renderer = gameRenderer;
+
+				html5.enableInput();
+				
+				var l = [];
+				var u = [];
+				for (var a in jsEngine.assetList) {
+					if (jsEngine.assetList[a].type == AssetImage)
+						if (jsEngine.assetList[a].info.ui) {
+							l.push(html5.image(jsEngine.assetList[a].path));
+							u.push(jsEngine.assetList[a].path);
+						}
+				}
+
+				jsEngine.modules.ui.selectors.push (
+					selector = new UISelector(html5.mousePos, l, u)
+				);
+
+				var l = [];
+				var u = [];
+				for (var a in jsEngine.assetList) {
+					if (jsEngine.assetList[a].type == AssetImage)
+						if (jsEngine.assetList[a].info.tile) {
+							l.push(html5.image(jsEngine.assetList[a].path));
+							u.push(jsEngine.assetList[a].path);
+						}
+				}
+
+				jsEngine.modules.ui.selectors.push (
+					selector = new UISelector(html5.mousePos, l, u)
+				);
+			}
+
+			var selector = null;
+			var b2start = 0;
+			var click = false;
+			jsEngine.userCallbacks['onGameUpdate'] = function () {				
+				if (selector)
+					selector.p = html5.mousePos;
+
+				html5.context.save();
+				html5.context.scale(2,2);
+
+				// Atualiza os objetos que dependem da física
+				jsEngine.modules.physics.step();
+
+				// Controla objetos que estão sendo arrastados pela cena
+				jsEngine.modules.drag.step();
+
+				jsEngine.modules.animation.step();
+				
+				// Renderiza a cena principal
+				jsEngine.modules.render.render();
+				
+				// Controla tiros
+				jsEngine.modules.shot.step();
+
+				// Desenha o grid
+				jsEngine.modules.drag.render(selector);				
+				
+				// Desenha menus on-screen
+				jsEngine.modules.ui.update();
+
+				// Desenha mensagens
+				jsEngine.modules.messages.render();
+				
+				if (html5.keyboard[html5.keyW]) {
+					html5.keyboard[html5.keyW] = false;
+					jsEngine.modules.drag.toggleGrid();
+					jsEngine.modules.render.renderer.zoom();
+				}
+				
+				if (html5.keyboard[html5.keyE]) {
+					html5.keyboard[html5.keyE] = false;
+					jsEngine.modules.render.renderer.scene.exportJSON();
+				}
+
+				if (html5.keyboard[html5.keyI]) {
+					html5.keyboard[html5.keyI] = false;
+					jsEngine.modules.render.renderer.scene.importJSON();
+				}
+
+				if (jsEngine.pt-b2start > 0.2 && b2start != 0) {
+					if (html5.keyboard[html5.keyShift]) {
+						html5.keyboard[html5.keyShift] = false;
+						if (selector != jsEngine.modules.ui.selectors[0]) {
+							selector.hide();
+							selector = jsEngine.modules.ui.selectors[0];
+						} else {
+							selector.hide();
+							selector = jsEngine.modules.ui.selectors[1];
+						}
+					}
+					if  (!selector.isShow)
+						selector.show();
+				}
+
+				if (!html5.mouseButton2) {
+					b2start = 0;
+					if (!selector.closing && selector.isShow) {
+						selector.hide();
+						click = false;
+					}
+				}
+
+				if (!html5.mouseButton2 && click && b2start != -1){
+					click = false;
+					var path = selector.getUserData();
+
+					// Delete tile
+					if (path == "assets/images/ui/trash.png") {
+						var underMouse = jsEngine.modules.drag.underMouse();
+						if (underMouse.length > 0) {
+							var filename = underMouse[underMouse.length-1].image.split("/");
+							filename = filename[filename.length-1];
+
+							jsEngine.modules.messages.addMessage(new Message("R "+filename));
+							var o = underMouse[underMouse.length-1];
+							jsEngine.modules.physics.s_objects.splice(jsEngine.modules.physics.s_objects.indexOf(o.physics),1);
+							jsEngine.modules.render.renderer.deleteStatic(o);
+						} else {
+							jsEngine.modules.messages.addMessage(new Message("No objects to delete!"));
+						}
+					} else if (path == "assets/images/ui/bring.front.png") { // Bring to front
+						var underMouse = jsEngine.modules.drag.underMouse();
+						if (underMouse.length > 0) {
+							jsEngine.modules.render.renderer.bringFront(underMouse[0]);
+						} else {
+							jsEngine.modules.messages.addMessage(new Message("No objects to bring front!"));
+						}
+					} else if (path == "assets/images/ui/layers.png") { // Calculate object order
+						jsEngine.modules.messages.addMessage(new Message("[CMD] Depth Sort"));
+						jsEngine.modules.render.renderer.scene.order();
+					} else if (path == "assets/images/ui/x.png") { // Add tile with collision
+						var obj = new jsEngine.modules.object.StaticObject(path,
+																 html5.image(path).width,
+																 html5.image(path).height,
+																 true);
+						obj.physics.p = jsEngine.modules.drag.adjustToGrid(jsEngine.modules.math.add(
+							jsEngine.modules.math.sub(html5.mousePos,[16,16]),
+							jsEngine.modules.render.renderer.cameraPosition
+						));
+						jsEngine.modules.render.renderer.scene.staticObjects.push (obj);
+					} else { // Add tile
+						var col = path.search("nocol")==-1;
+						var filename = path.split("/");
+						filename = filename[filename.length-1];
+
+						jsEngine.modules.messages.addMessage(new Message("A "+filename));
+
+						var obj = new jsEngine.modules.object.StaticObject(path,
+																 html5.image(path).width,
+																 html5.image(path).height,
+																 col,jsEngine.objectDepth[path]);
+						obj.physics.p = jsEngine.modules.drag.adjustToGrid(jsEngine.modules.math.add(
+							jsEngine.modules.math.sub(html5.mousePos,[16,16]),
+							jsEngine.modules.render.renderer.cameraPosition
+						));
+						jsEngine.modules.render.renderer.scene.staticObjects.push (obj);
+					}
+				}
+
+				if (html5.mouseButton2) {
+					click = true;
+					if (b2start == 0)
+						b2start = jsEngine.pt;
+				}
+
+				html5.context.restore();
+			}
+		</script>
+	</body>
+</html>

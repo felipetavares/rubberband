@@ -1,0 +1,113 @@
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	/*cursor: none;*/
+}
+
+#transfer {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	display: none;
+	width: 50%;
+	height: 50%;
+	background: white;
+	color: black;
+	overflow: auto;
+}
+
+.UIPanel {
+	text-align: center;
+	font-weight: normal;
+	font-size: 20px;
+
+	background: #0050e0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	margin: 0px;
+	padding: 0px;
+
+	border-radius: 0px;
+
+	overflow: hidden;
+
+	cursor: default;
+}
+
+.UITitle {
+	position: relative;
+	display: block;
+	color: #003030;
+	background-color: #6090ff;
+
+	border-radius: 16px;
+
+	margin: 2px;
+	margin-bottom: 16px;
+
+	border-bottom: 1px solid #6090ff;
+}
+
+.UIGraphListView {
+	background: transparent;
+	position: relative;
+	top: 0;
+	left: 0;
+
+	width: 250px;
+	max-height: 300px;
+	overflow: auto;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+.UIListView {
+	background: transparent;
+	position: relative;
+	top: 0;
+	left: 0;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+.UIOption {
+	position: relative;
+	display: block;
+	color: darkblue;
+	background-color: #6090ff;
+
+	border-left: 8px solid transparent;
+
+	margin: 2px;
+	padding: 8px;
+
+	border-radius: 4px;
+
+	cursor: pointer;
+}
+
+.UIOption-hover {
+	positon: relative;
+	display: block;
+	color: white;
+	background-color: #609030;
+
+	margin: 2px;
+	padding: 8px;
+
+	border-left: 8px solid green;
+
+	border-radius: 4px;
+
+	cursor: pointer;
+}
